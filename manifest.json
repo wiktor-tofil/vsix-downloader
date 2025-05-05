@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "VSIX Downloader",
+  "version": "1.0",
+
+  "description": "Allows you to download VSIX files directly from VSCode Marketplace.",
+
+  "icons": {
+    "48": "icons/icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://marketplace.visualstudio.com/*"],
+      "js": ["vsix.js"]
+    }
+  ]
+}
